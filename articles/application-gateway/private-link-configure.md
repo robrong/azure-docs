@@ -37,11 +37,14 @@ You can configure Application Gateway Private Link using multiple methods:
 Before configuring Private Link, ensure you have:
 - An existing Application Gateway
 - A virtual network with a dedicated subnet for Private Link (separate from the Application Gateway subnet)
+-  `privateLinkServiceNetworkPolicies` should be disabled in the dedicated subnet
 - Appropriate permissions to create and configure Private Link resources
+- 
 
 ## Define a subnet for Private Link configuration
 
 To enable Private Link configuration, you must create a dedicated subnet that's separate from the Application Gateway subnet. This subnet is used exclusively for Private Link IP configurations and can't contain any Application Gateway instances.
+
 
 **Subnet sizing considerations:**
 - Each IP address allocated to this subnet supports up to 65,536 concurrent TCP connections through Private Link
